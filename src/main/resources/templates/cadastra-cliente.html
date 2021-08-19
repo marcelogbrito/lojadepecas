@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>cadastra cliente</title>
+</head>
+
+<body>
+<a href="/"><h1>Almoxarifado</h1></a>
+<p>Cadastra novo cliente</p>
+<form action="salva-cliente" method="POST">
+  <div style="flex-direction: row">
+    <div style="flex">
+      <input type="number" value="" name="cnpj" required placeholder="Digite o CNPJ"/>
+    </div>
+   <div style="flex">
+     <input type="text" value="" name="nome" required placeholder="Digite o nome do cliente"/>
+   </div>
+    <div style="flex">
+      <input type="text" value="" name="endereco" required placeholder="Digite o endereco"/>
+    </div>
+    <div style="flex">
+      <input type="text" value="" name="telefone" required placeholder="Digite o telefone"/>
+    </div>
+<div style="flex">
+  <button type="submit">Grava</button>
+</div>
+
+  </div>
+</form>
+<hr />
+<p>Clientes existentes</p>
+
+<table>
+  <thead>
+  <tr><th>cnpj</th><th>Nome</th><th>endereco</th><th>telefone</th></tr>
+  </thead>
+  <tbody>
+  <tr th:each="cliente: ${clientes}">
+    <td th:text="${cliente.cnpj}"  />
+    <td th:text="${cliente.nome}"  />
+    <td th:text="${cliente.endereco}"  />
+    <td th:text="${cliente.telefone}"  />
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>

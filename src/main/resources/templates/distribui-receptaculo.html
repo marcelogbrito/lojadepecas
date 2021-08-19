@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Distribui para receptaculo</title>
+</head>
+<body>
+
+<a href="/"><h1>Almoxarifado</h1></a>
+<h1>Distribuição receptaculo</h1>
+<p>Tipo</p>
+<form action="salva-estoca-receptaculo" method="POST">
+  <select name="tipoPeca">
+    <div th:each="tipoPeca: ${tiposPeca}">
+    <option th:text="${tipoPeca.descricao}" th:value="${tipoPeca.upc}" />
+    </div>
+  </select>
+  <select name="tipoPeca">
+    <div th:each="receptaculo: ${receptaculos}">
+      <option th:text="${receptaculo.corredorReceptaculo}" th:value="${receptaculo.id}" />
+    </div>
+  </select>
+  <input type="number" name="quantidade" placeholder="quantidade"/>
+  <button type="submit">Grava</button>
+</form>
+
+
+<h1>Estoque</h1>
+<table>
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>peça UPC</th>
+    <th>Peça descrição</th>
+    <th>Peça situação</th>
+    <th>data hora entrada</th>
+    <th>Recptaculo</th>
+    <th>data hora receptaculo</th>
+    <th>data hora de saída</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="peca: ${pecas}">
+    <td th:text="${peca.id}" />
+    <td th:text="${peca.tipoPeca.upc}" />
+    <td th:text="${peca.tipoPeca.descricao}" />
+    <td th:text="${peca.situacao}" />
+    <td th:text="${peca.dataHoraEntrada}" />
+    <td th:text="${peca.dataHoraReceptaculo}" />
+    <td th:text="${peca.receptaculo?.corredorReceptaculo}" />
+    <td th:text="${peca.dataHoraSaida}" />
+
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>

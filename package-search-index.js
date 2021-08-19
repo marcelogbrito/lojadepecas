@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"com.modelodb.lojadepecas"},{"l":"com.modelodb.lojadepecas.controllers"},{"l":"com.modelodb.lojadepecas.model"},{"l":"com.modelodb.lojadepecas.repositories"}]

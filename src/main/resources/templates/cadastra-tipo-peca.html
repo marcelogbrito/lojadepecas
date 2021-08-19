@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>cadastra tipo peça</title>
+</head>
+
+<body>
+<a href="/"><h1>Almoxarifado</h1></a>
+<p>Cadastra novo tipo de peça</p>
+<form action="salva-tipo-peca" method="POST">
+  <div style="flex-direction: row">
+    <div style="flex">
+      <input type="text" value="" name="upc" required placeholder="Digite o UCP"/>
+    </div>
+   <div style="flex">
+     <input type="text" value="" name="descricao" required placeholder="Digite o nome da peça"/>
+   </div>
+<div style="flex">
+  <button type="submit">Grava peça</button>
+</div>
+
+  </div>
+</form>
+
+<table>
+  <thead>
+  <tr><th>nome da peça</th></tr>
+  </thead>
+  <tbody>
+  <tr><td>peça a</td></tr>
+  </tbody>
+</table>
+</body>
+</html>

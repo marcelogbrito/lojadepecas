@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>cadastra tipo peça</title>
+</head>
+
+<body>
+<a href="/"><h1>Almoxarifado</h1></a>
+<p>Cadastra novo receptaculo</p>
+<form action="salva-receptaculo" method="POST">
+  <div style="flex-direction: row">
+
+    <div style="flex">
+      <p>escolha o Corredor</p>
+      <select name="corredor">
+        <div th:each="corredor: ${corredores}">
+          <option th:text="${corredor.descricao}" th:value="${corredor.id}" />
+        </div>
+      </select>
+    </div>
+
+    <div style="flex">
+      <button type="submit">Grava</button>
+    </div>
+
+  </div>
+</form>
+<hr />
+<p>recptaculos existentes</p>
+
+<table>
+  <thead>
+  <tr><th>id</th><th>numero receptaculo</th><th>Numero do corredor</th></tr>
+  </thead>
+  <tbody>
+  <tr th:each="receptaculo: ${receptaculos}">
+    <td th:text="${receptaculo.id}"  />
+    <td th:text="${receptaculo.corredorReceptaculo}"  />
+    <td th:text="${receptaculo.corredor.id}"  />
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>

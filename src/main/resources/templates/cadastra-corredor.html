@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>cadastra corredor</title>
+</head>
+
+<body>
+<a href="/"><h1>Almoxarifado</h1></a>
+<p>Cadastra novo corredor</p>
+<form action="salva-corredor" method="POST">
+  <div style="flex-direction: row">
+
+    <div style="flex">
+      <input type="text" value="" name="descricao" required placeholder="Digite a descrição"/>
+    </div>
+
+    <div style="flex">
+      <button type="submit">Grava</button>
+    </div>
+
+  </div>
+</form>
+<hr />
+<p>Corredores existentes</p>
+
+<table>
+  <thead>
+  <tr><th>numero</th><th>Descroição</th></tr>
+  </thead>
+  <tbody>
+  <tr th:each="corredor: ${corredores}">
+    <td th:text="${corredor.id}"  />
+    <td th:text="${corredor.descricao}"  />
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>
