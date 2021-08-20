@@ -1,5 +1,12 @@
 # lojadepecas
 
+Essa aplicação representa o fluxo de uma aplicação de estoque de peças utilizando as seguintes espcificações:
+
+* Java 11
+* Framework springboot
+* Spring JPA Data para mapeamento ORM e transação de Bancos de Dados
+* Thymeleaf como camada de visualização
+
 Para rodar a aplicação:
 
 1. rodar o script de criação do banco de dados https://github.com/marcelogbrito/lojadepecas/blob/master/script-banco-almoxarifado.sql
