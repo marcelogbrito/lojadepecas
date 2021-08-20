@@ -9,7 +9,7 @@ Essa aplicação representa o fluxo de uma aplicação de estoque de peças util
 
 Para rodar a aplicação:
 
-1. rodar o script de criação do banco de dados https://github.com/marcelogbrito/lojadepecas/blob/master/script-banco-almoxarifado.sql
+1. rodar o script de criação do banco de dados https://github.com/marcelogbrito/lojadepecas/blob/master/script-banco-almoxarifado.sql (opcionalmente o proprio spring pode gerar essa estrutura caso no arquivo application.properties (criado no passo 2 abaixo) esta configurada a seguinte linha: `spring.jpa.hibernate.ddl-auto=update`. Esse comando faz o spring criar as estruturas do banco de dados caso ainda não existam ou caso precisem ser atualizadas (a referencia são as classes entity dentro da pasta model)
 2. criar um arquivo chamado `application.properties` (é o arquivo onde estão hospedadas as configurações de banco de dados) dentro da pasta `src/main/resources`
 3. preencher o arquivo basicamente com esse conteúdo (se o banco de dados escolhido for mysql):
 
